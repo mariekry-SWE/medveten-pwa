@@ -1,4 +1,4 @@
-const coverImage = "./header.png"; //
+const coverImage = "./header.png";
 const tracks = [
 { title: "Koncentration", url: "https://hogrefe.se/userfiles/files/2__Koncentration_B.mp3" },
 { title: "Andningstrappan", url: "https://hogrefe.se/userfiles/files/4__Andningstrappan_B.mp3" },
