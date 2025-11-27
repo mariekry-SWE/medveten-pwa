@@ -105,3 +105,27 @@ audio {
     border-radius: 30px;
     cursor: pointer;
 }
+/* Ny stil för att visa om ett spår spelas */
+.is-playing {
+    border: 3px solid #3498db; /* Blå ram runt knappen som spelas */
+    background-color: #e8f0fe; /* Ljusblå bakgrund */
+}
+
+/* Icon (Döljer den faktiska texten under spel) */
+.icon-play::before {
+    content: "▶️ KÖR NU"; /* Symbol och text när den spelas */
+    font-size: 1.2rem;
+    color: #3498db;
+    animation: pulse 1.5s infinite; /* Lätt puls-effekt */
+}
+
+.track-card.is-playing .track-title {
+    display: none; /* Dölj den vanliga titeln när den spelas */
+}
+
+/* Enkel animation för visuell uppmärksamhet */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
