@@ -1,10 +1,10 @@
 {
-  "name": "Mindfulness Övningar",
-  "short_name": "Mindfulness",
+  "name": "Medveten närvaro",
+  "short_name": "Medveten",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#f0f4f8",
-  "theme_color": "#f0f4f8",
+  "background_color": "#9f8a67",
+  "theme_color": "#9f8a67",
   "icons": [
     {
       "src": "https://hogrefe.se/globalassets/omslagsbilder/klinisk-psykologi/psykoterapi-for-vuxna-med-adhd-arbetsbok_2.jpg?width=192",
