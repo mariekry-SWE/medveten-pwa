@@ -10,7 +10,7 @@ const tracks = [
 { title: "Bioduken", url: "https://hogrefe.se/userfiles/files/16__Bioduken_B.mp3" },
 { title: "Det inre rummet", url: "https://hogrefe.se/userfiles/files/18__Det_inre_rummet_B.mp3" },
 { title: "Den långa listan", url: "https://hogrefe.se/userfiles/files/20__Den_la%CC%8Anga_listan_B.mp3" },
-{ title: "Andning i benet och där det gör ont", url: "https://hogrefe.se/userfiles/files/22__Andning_i_benet_och_da%CC%88r_det_go%CC%88r_ont_B.mp3" },
+{ title: "Andning där det gör ont", url: "https://hogrefe.se/userfiles/files/22__Andning_i_benet_och_da%CC%88r_det_go%CC%88r_ont_B.mp3" },
 { title: "Fokus på relationsproblem", url: "https://hogrefe.se/userfiles/files/24__Fokus_pa%CC%8A_relationsproblem_B.mp3" },
 ];
 // ----------------------------------------------------------
