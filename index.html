@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Mindfulness</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#f0f4f8">
+    <link rel="apple-touch-icon" href="icon.png"> 
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <img id="book-cover" src="" alt="Bokomslag" class="cover-image">
+            <h1>Mina Övningar</h1>
+        </header>
+
+        <div id="track-list" class="grid-container">
+            </div>
+
+        <div id="player-overlay" class="hidden">
+            <div class="player-content">
+                <h2 id="current-title">Välj en övning</h2>
+                <audio id="audio-player" controls preload="metadata"></audio>
+                <button id="close-player" class="big-btn">Stäng</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+                .then(() => console.log('Service Worker registrerad'))
+                .catch(err => console.error('SW misslyckades', err));
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "Mindfulness Övningar",
+  "short_name": "Mindfulness",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f0f4f8",
+  "theme_color": "#f0f4f8",
+  "icons": [
+    {
+      "src": "https://hogrefe.se/globalassets/omslagsbilder/klinisk-psykologi/psykoterapi-for-vuxna-med-adhd-arbetsbok_2.jpg?width=192",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "https://hogrefe.se/globalassets/omslagsbilder/klinisk-psykologi/psykoterapi-for-vuxna-med-adhd-arbetsbok_2.jpg?width=512",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ]
+}
