@@ -2,7 +2,7 @@ const coverImage = "https://via.placeholder.com/150";
 const tracks = [
 { title: "Koncentration", url: "https://hogrefe.se/userfiles/files/2__Koncentration_B.mp3" },
 { title: "Andningstrappan", url: "https://hogrefe.se/userfiles/files/4__Andningstrappan_B.mp3" },
-{ title: Bodyscan", url: "https://hogrefe.se/userfiles/files/6__Bodyscan_B.mp3" },
+{ title: "Bodyscan", url: "https://hogrefe.se/userfiles/files/6__Bodyscan_B.mp3" },
 { title: "Surfa på känslan", url: "https://hogrefe.se/userfiles/files/8__Surfa_pa%CC%8A_ka%CC%88nslan_B.mp3" },
 { title: "Att komma hit", url: "https://hogrefe.se/userfiles/files/10__Att_komma_hit_B.mp3" },
 { title: "Småleende", url: "https://hogrefe.se/userfiles/files/12__Sma%CC%8Aleende_B.mp3" },
