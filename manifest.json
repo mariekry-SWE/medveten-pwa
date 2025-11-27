@@ -7,12 +7,12 @@
   "theme_color": "#9f8a67",
  "icons": [
     {
-      "src": "medveten-ikon.png", /* <-- Ändrad till din nya fil */
+      "src": "medveten-ikon.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "medveten-ikon.png", /* <-- Ändrad till din nya fil */
+      "src": "medveten-ikon.png",
       "sizes": "512x512",
       "type": "image/png"
     }
