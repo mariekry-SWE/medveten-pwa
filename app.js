@@ -34,12 +34,71 @@ tracks.forEach(track => {
     list.appendChild(div);
 });
 
-function playTrack(track) {
+let currentTrackCard = null; // För att hålla reda på knappen som spelas
+
+// Funktion för att nollställa alla knappars status
+function resetTrackStates() {
+    document.querySelectorAll('.track-card').forEach(card => {
+        card.classList.remove('is-playing', 'icon-play');
+        card.innerHTML = `<span class="track-title">${card.dataset.title}</span>`;
+    });
+}
+
+function playTrack(track, cardElement) {
+    // 1. Nollställ gamla knappar
+    resetTrackStates(); 
+
+    // 2. Uppdatera spelarens UI
     currentTitle.innerText = track.title;
     audioPlayer.src = track.url;
     playerOverlay.classList.remove('hidden');
+    
+    // 3. Markera den nuvarande knappen (visuell feedback)
+    cardElement.classList.add('is-playing', 'icon-play');
+    cardElement.dataset.title = track.title; // Lagrar titeln för återställning
+    
+    // 4. Starta ljudet
     audioPlayer.play();
+    currentTrackCard = cardElement;
 }
+
+// VIKTIGT: Den här måste läggas till i loopen för att det ska funka!
+// Din gamla lopp:
+/*
+tracks.forEach(track => {
+    // ...
+    div.onclick = () => playTrack(track);
+    // ...
+});
+*/
+
+// DEN NYA loopen ska skicka med DIV-elementet (knappen)
+list.innerHTML = ''; // Rensa eventuella gamla knappar
+tracks.forEach(track => {
+    const div = document.createElement('div');
+    div.className = 'track-card';
+    div.innerHTML = `<span class="track-title">${track.title}</span>`;
+    div.dataset.title = track.title; // Lägg till datatitel
+
+    // Skickar med både spåret och knappen till playTrack
+    div.onclick = () => playTrack(track, div); 
+    list.appendChild(div);
+});
+
+// Lägg till en lyssnare som rensar statusen när ljudet är slut
+audioPlayer.onended = () => {
+    resetTrackStates();
+    currentTrackCard = null;
+    playerOverlay.classList.add('hidden');
+};
+
+// Uppdatera stäng-knappen så den rensar statusen också
+closeBtn.onclick = () => {
+    audioPlayer.pause();
+    resetTrackStates();
+    currentTrackCard = null;
+    playerOverlay.classList.add('hidden');
+};
 
 closeBtn.onclick = () => {
     audioPlayer.pause();
